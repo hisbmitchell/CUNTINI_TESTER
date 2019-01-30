@@ -27,9 +27,6 @@ var secondErrorHeight = 242;
 var multiplier = 1;
 var clickRate = 1;
 
-var preDone;
-
-
 function preload(){
     //djPic1 = loadImage('dj_pics/djPic1.jpg');	
 	
@@ -108,16 +105,13 @@ function imageCreate2(element, x, y, inWidth, inHeight) {
   y = newY; //50;
     //windowWidth * random(1), windowHeight * random(1)
     element.position(x,y);
- 
-  }
-	
-	preDone = true;
+   }
 }
 
 
 function mousePressed() {
   console.log('you clicked!');
-  if (preDone === true) {
+  
   numOfClicks += 1;
   randWidth = random(0, 0.7);
   randHeight = random(0, 0.7);
@@ -169,8 +163,6 @@ function draw() {
       
   //     }
   // }
-	  
-  }
   }
     
   else if (numOfClicks >= 3 ){
@@ -224,7 +216,3 @@ function windowResized(){
         resizeCanvas(windowWidth, windowHeight);
         //bgVideo.size(windowHeight*2, 300);
       }
-
-
-
-
