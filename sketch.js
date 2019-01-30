@@ -28,7 +28,11 @@ var multiplier = 1;
 var clickRate = 1;
 
 function preload(){
-    //djPic1 = loadImage('dj_pics/djPic1.jpg');
+    //djPic1 = loadImage('dj_pics/djPic1.jpg');	
+  }
+
+function setup() {
+  createCanvas(windowWidth, windowHeight);
 	
 	var chain = createImg('gifs/chain_up.gif');
   	var chain2 = new imageCreate2(chain, windowWidth/2, 0, chainWidth, chainHeight);
@@ -38,10 +42,6 @@ function preload(){
 	
 	var djImg = createImg('gifs/Error1.png');
   	djInfo = new imageCreate2(djImg, -700, -700, djInfoWidth, djInfoHeight);
-  }
-
-function setup() {
-  createCanvas(windowWidth, windowHeight);
  
     if (windowWidth <1000){
     var cuntiniRatio = cuntiniHeight/cuntiniWidth;
