@@ -51,7 +51,7 @@ function setup() {
   var chain = createImg('gifs/chain_up.gif');
   var chain2 = new imageCreate2(chain, windowWidth/2, 0, chainWidth, chainHeight);
   
-  var cuntini = createImg('gifs/CUNTINI3.gif');
+  var cuntini = createImg('gifs/CUNTINI2.gif');
   var cuntini2 = new imageCreate2(cuntini, windowWidth/2 - 260 , 100, cuntiniWidth, cuntiniHeight);
   
   sound = loadSound('assets/sound.m4a');
