@@ -109,6 +109,7 @@ function mousePressed() {
   numOfClicks += 1;
   randWidth = random(0, 0.7);
   randHeight = random(0, 0.7);
+  currentImg +=1;
   
   
   if (currentImg== images.length){
@@ -158,13 +159,13 @@ function draw() {
   // }
   }
     
-  else if ((numOfClicks >= 3 && numOfClicks % 2 !== 0)){
+  else if (numOfClicks >= 3 ){
     //console.log('click = 1!');
     randX = windowWidth * randWidth;
     randY = windowHeight * randHeight;
     images[currentImg].changePos(randX, randY);
 
-    currentImg +=1;
+    
     
     if (soundPlaying === false){
     sound.play();
