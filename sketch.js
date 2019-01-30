@@ -35,15 +35,16 @@ function setup() {
   
     if (windowWidth <1000){
     var cuntiniRatio = cuntiniHeight/cuntiniWidth;
-    cuntiniWidth = windowWidth * 0.9;
-    cuntiniHeight = cuntiniWidth * cuntiniRatio;
-    chainWidth = chainWidth * 2; 
-    chainHeight = chainHeight * 2; 
-    djInfoWidth = djInfoWidth * 2.5; 
-    djInfoHeight = djInfoHeight * 2.5; 
-    secondErrorWidth = secondErrorWidth * 2.5; 
-    secondErrorHeight = secondErrorHeight * 2.5;
-    multiplier = 2;
+    var chainRatio = chainWidth/chainHeight;
+   	cuntiniWidth = windowWidth * 0.9;
+   	cuntiniHeight = cuntiniWidth * cuntiniRatio;
+   	chainHeight = windowHeight;
+	chainWidth = chainHeight * chainRatio; 
+   	djInfoWidth = djInfoWidth * 2.5; 
+   	djInfoHeight = djInfoHeight * 2.5; 
+   	secondErrorWidth = secondErrorWidth * 2.5; 
+   	secondErrorHeight = secondErrorHeight * 2.5;
+   	multiplier = 2;
     
     
   }
