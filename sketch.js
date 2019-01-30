@@ -1,4 +1,4 @@
-var DjFile = ['dj_pics/djPic11.jpg','dj_pics/djPic11.jpg', 'dj_pics/djPic1.jpg', 'dj_pics/djPic2.jpg','dj_pics/djPic3.jpg','dj_pics/djPic4.jpg','dj_pics/djPic5.jpg', 'dj_pics/djPic6.jpg', 'dj_pics/djPic10.jpg', 'dj_pics/djPic8.jpg', 'dj_pics/djPic9.jpg', 'dj_pics/djPic7.jpg', 'dj_pics/djPic11.jpg', 'dj_pics/djPic12.jpg'];
+var DjFile = ['dj_pics/djPic11.jpg','dj_pics/djPic11.jpg', 'dj_pics/djPic11.jpg', 'dj_pics/djPic1.jpg', 'dj_pics/djPic2.jpg','dj_pics/djPic3.jpg','dj_pics/djPic4.jpg','dj_pics/djPic5.jpg', 'dj_pics/djPic6.jpg', 'dj_pics/djPic10.jpg', 'dj_pics/djPic8.jpg', 'dj_pics/djPic9.jpg', 'dj_pics/djPic7.jpg', 'dj_pics/djPic11.jpg', 'dj_pics/djPic12.jpg'];
 var gifFile = ['gifs/car.gif', 'gifs/phone.gif', 'gifs/slime.gif', 'gifs/swim.gif', 'gifs/iceGloves.png', 'gifs/dance.jpg', 'gifs/gloves.gif', 'gifs/math.gif', 'gifs/head.gif', 'gifs/sparklez.gif', 'gifs/spikes.png', 'gifs/rock2.gif', 'gifs/goo.gif', 'gifs/pillow.gif', 'gifs/what.png'];
 var errors = [];
 var images = [];
