@@ -29,20 +29,26 @@ var clickRate = 1;
 
 function preload(){
     //djPic1 = loadImage('dj_pics/djPic1.jpg');	
+	
+	
 	  if (windowWidth <1000){
-    var cuntiniRatio = cuntiniHeight/cuntiniWidth;
-    var chainRatio = chainWidth/chainHeight;
-   	cuntiniWidth = windowWidth;
-   	cuntiniHeight = cuntiniWidth * cuntiniRatio;
-   	chainHeight = windowHeight;
+    		var cuntiniRatio = cuntiniHeight/cuntiniWidth;
+    
+   		cuntiniWidth = windowWidth;
+   		cuntiniHeight = cuntiniWidth * cuntiniRatio;
+   		
+   		djInfoWidth = djInfoWidth * 2.5; 
+   		djInfoHeight = djInfoHeight * 2.5; 
+   		secondErrorWidth = secondErrorWidth * 2.5; 
+   		secondErrorHeight = secondErrorHeight * 2.5;
+   		multiplier = 2;
+		clickRate = 0.5;  
+  	}
+	
+	var chainRatio = chainWidth/chainHeight;
+	chainHeight = windowHeight;
 	chainWidth = chainHeight * chainRatio; 
-   	djInfoWidth = djInfoWidth * 2.5; 
-   	djInfoHeight = djInfoHeight * 2.5; 
-   	secondErrorWidth = secondErrorWidth * 2.5; 
-   	secondErrorHeight = secondErrorHeight * 2.5;
-   	multiplier = 2;
-	clickRate = 0.5;  
-  }
+	
 	var chain = createImg('gifs/chain_up.gif');
   	var chain2 = new imageCreate2(chain, windowWidth/2, 0, chainWidth, chainHeight);
   
