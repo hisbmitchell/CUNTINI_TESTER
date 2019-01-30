@@ -34,8 +34,8 @@ function setup() {
   
     if (windowWidth <1000){
     
-    cuntiniWidth = cuntiniWidth * 2;
-    cuntiniHeight = cuntiniHeight * 2;
+    cuntiniWidth = cuntiniWidth * 1.5;
+    cuntiniHeight = cuntiniHeight * 1.5;
     chainWidth = chainWidth * 2; 
     chainHeight = chainHeight * 2; 
     cuntiniWidth = cuntiniWidth * 2; 
