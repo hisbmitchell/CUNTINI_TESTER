@@ -38,8 +38,8 @@ function setup() {
     cuntiniHeight = cuntiniHeight * 1.5;
     chainWidth = chainWidth * 2; 
     chainHeight = chainHeight * 2; 
-    cuntiniWidth = cuntiniWidth * 2; 
-    cuntiniHeight = cuntiniHeight * 2;
+    cuntiniWidth = cuntiniWidth * windowWidth * 0.8; 
+    cuntiniHeight = cuntiniHeight * windowWidth * 0.8;
     djInfoWidth = djInfoWidth * 2; 
     djInfoHeight = djInfoHeight * 2; 
     secondErrorWidth = secondErrorWidth * 2; 
