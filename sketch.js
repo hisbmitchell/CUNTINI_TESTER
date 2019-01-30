@@ -24,6 +24,7 @@ var djInfoWidth = 266;
 var djInfoHeight = 406; 
 var secondErrorWidth = 239; 
 var secondErrorHeight = 242;
+var multiplier = 1;
 
 function preload(){
     //djPic1 = loadImage('dj_pics/djPic1.jpg');
@@ -33,15 +34,16 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   
     if (windowWidth <1000){
-    
-    cuntiniWidth = cuntiniWidth * 2;
-    cuntiniHeight = cuntiniHeight * 2;
+    var cuntiniRatio = cuntiniHeight/cuntiniWidth;
+    cuntiniWidth = windowWidth * 0.7;
+    cuntiniHeight = cuntiniWidth * cuntiniRatio;
     chainWidth = chainWidth * 2; 
     chainHeight = chainHeight * 2; 
-    djInfoWidth = djInfoWidth * 2; 
-    djInfoHeight = djInfoHeight * 2; 
-    secondErrorWidth = secondErrorWidth * 2; 
-    secondErrorHeight = secondErrorHeight * 2;
+    djInfoWidth = djInfoWidth * 2.5; 
+    djInfoHeight = djInfoHeight * 2.5; 
+    secondErrorWidth = secondErrorWidth * 2.5; 
+    secondErrorHeight = secondErrorHeight * 2.5;
+    multiplier = 2;
     
     
   }
