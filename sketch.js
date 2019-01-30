@@ -16,8 +16,8 @@ var soundPlaying = false;
 var timeTrue = true;
 var newTime;
 
-var chainWidth = 22; 
-var chainHeight = 543; 
+var chainWidth = windowWidth * 0.04051; 
+var chainHeight = windowWidth; 
 var cuntiniWidth = 520; 
 var cuntiniHeight = 469;
 var djInfoWidth = 266; 
@@ -52,7 +52,7 @@ function setup() {
   var chain = createImg('gifs/chain_up.gif');
   var chain2 = new imageCreate2(chain, windowWidth/2, 0, chainWidth, chainHeight);
   
-  var cuntini = createImg('gifs/CUNTINI5.gif');
+  var cuntini = createImg('gifs/CUNTINI7.gif');
   var cuntini2 = new imageCreate2(cuntini, windowWidth/2 - cuntiniWidth/2 , windowHeight/2 - cuntiniHeight/2, cuntiniWidth, cuntiniHeight);
   
   sound = loadSound('assets/sound.m4a');
