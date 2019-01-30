@@ -22,6 +22,10 @@ function preload(){
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
+  
+  var chain = createImg('gifs/chain_up.gif');
+  var chain2 = new imageCreate2(chain, windowWidth/2, 0);
+  
   var cuntini = createImg('gifs/CUNTINI2.gif');
   var cuntini2 = new imageCreate2(cuntini, windowWidth/2 - 260 , 100);
   
@@ -92,37 +96,37 @@ function draw() {
   if (numOfClicks == 1){
     djInfo.changePos(windowWidth/3, windowHeight/4);
     
-     var currentError = 0;
-      var errorX = windowWidth/4;
-      var errorY = windowHeight/5;
+  //   var currentError = 0;
+  //     var errorX = windowWidth/4;
+  //     var errorY = windowHeight/5;
       
-      millisecond = millis();
+  //     millisecond = millis();
       
-      var timePassed = millisecond;
+  //     var timePassed = millisecond;
       
       
       
-      if (timeTrue === true) {
-        newTime = timePassed;
-        timeTrue = false;
-      }
+  //     if (timeTrue === true) {
+  //       newTime = timePassed;
+  //       timeTrue = false;
+  //     }
       
-      //newTime += 200;
-      console.log(newTime);
-      console.log(timePassed);
+  //     //newTime += 200;
+  //     console.log(newTime);
+  //     console.log(timePassed);
       
-     for (i=0; i<10; i++){
-      if (timePassed >= newTime){
+  //   for (i=0; i<10; i++){
+  //     if (timePassed >= newTime){
         
-      errors[currentError].changePos(errorX, errorY);
-      currentError += 1;
-      errorX += 20;
-      errorY +=20;
+  //     errors[currentError].changePos(errorX, errorY);
+  //     currentError += 1;
+  //     errorX += 20;
+  //     errorY +=20;
       
-      newTime += 400;
+  //     newTime += 400;
       
-      }
-  }
+  //     }
+  // }
   }
     
   else if (numOfClicks >= 2){
