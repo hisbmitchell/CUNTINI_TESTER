@@ -173,7 +173,7 @@ function draw() {
   // }
   }
     
-  else if (numOfClicks >= 3 ){
+  if (numOfClicks >= 3 ){
     //console.log('click = 1!');
     randX = windowWidth * randWidth;
     randY = windowHeight * randHeight;
