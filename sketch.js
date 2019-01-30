@@ -76,7 +76,7 @@ function imageCreate2(element, x, y) {
 }
 
 
-function mousePressed() {
+function mouseReleased() {
   console.log('you clicked!');
   
   numOfClicks += 1;
