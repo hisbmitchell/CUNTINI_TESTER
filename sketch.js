@@ -163,7 +163,7 @@ function draw() {
   // }
   }
     
-  else if ((numOfClicks >= 4 && numOfClicks % 2 === 0)){
+  else if ((numOfClicks >= 3 && numOfClicks % 2 !== 0)){
     //console.log('click = 1!');
     randX = windowWidth * randWidth;
     randY = windowHeight * randHeight;
