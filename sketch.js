@@ -1,5 +1,5 @@
-var DjFile = ['dj_pics/djPic11.jpg','dj_pics/djPic11.jpg', 'dj_pics/djPic1.jpg', 'dj_pics/djPic2.jpg','dj_pics/djPic3.jpg','dj_pics/djPic4.jpg','dj_pics/djPic5.jpg', 'dj_pics/djPic6.jpg', 'dj_pics/djPic10.jpg', 'dj_pics/djPic8.jpg', 'dj_pics/djPic9.jpg', 'dj_pics/djPic7.jpg', 'dj_pics/djPic11.jpg'];
-var gifFile = ['gifs/car.gif', 'gifs/phone.gif', 'gifs/slime.gif', 'gifs/swim.gif', 'gifs/iceGloves.png', 'gifs/gloves.gif', 'gifs/math.gif', 'gifs/head.gif', 'gifs/sparklez.gif', 'gifs/spikes.png', 'gifs/rock2.gif', 'gifs/goo.gif', 'gifs/pillow.gif', 'gifs/what.png'];
+var DjFile = ['dj_pics/djPic11.jpg','dj_pics/djPic11.jpg', 'dj_pics/djPic1.jpg', 'dj_pics/djPic2.jpg','dj_pics/djPic3.jpg','dj_pics/djPic4.jpg','dj_pics/djPic5.jpg', 'dj_pics/djPic6.jpg', 'dj_pics/djPic10.jpg', 'dj_pics/djPic8.jpg', 'dj_pics/djPic9.jpg', 'dj_pics/djPic7.jpg', 'dj_pics/djPic11.jpg', 'dj_pics/djPic12.jpg'];
+var gifFile = ['gifs/car.gif', 'gifs/phone.gif', 'gifs/slime.gif', 'gifs/swim.gif', 'gifs/iceGloves.png', 'gifs/dance.jpg', 'gifs/gloves.gif', 'gifs/math.gif', 'gifs/head.gif', 'gifs/sparklez.gif', 'gifs/spikes.png', 'gifs/rock2.gif', 'gifs/goo.gif', 'gifs/pillow.gif', 'gifs/what.png'];
 var errors = [];
 var images = [];
 var randImageFile;
@@ -16,6 +16,15 @@ var soundPlaying = false;
 var timeTrue = true;
 var newTime;
 
+var chainWidth = 22; 
+var chainHeight = 543; 
+var cuntiniWidth = 520; 
+var cuntiniHeight = 469;
+var djInfoWidth = 266; 
+var djInfoHeight = 406; 
+var secondErrorWidth = 239; 
+var secondErrorHeight = 242;
+
 function preload(){
     //djPic1 = loadImage('dj_pics/djPic1.jpg');
   }
@@ -23,16 +32,32 @@ function preload(){
 function setup() {
   createCanvas(windowWidth, windowHeight);
   
-  var chain = createImg('gifs/chain_up.gif');
-  var chain2 = new imageCreate2(chain, windowWidth/2, 0);
+    if (windowWidth <1000){
+    
+    cuntiniWidth = cuntiniWidth * 2;
+    cuntiniHeight = cuntiniHeight * 2;
+    chainWidth = chainWidth * 2; 
+    chainHeight = chainHeight * 2; 
+    cuntiniWidth = cuntiniWidth * 2; 
+    cuntiniHeight = cuntiniHeight * 2;
+    djInfoWidth = djInfoWidth * 2; 
+    djInfoHeight = djInfoHeight * 2; 
+    secondErrorWidth = secondErrorWidth * 2; 
+    secondErrorHeight = secondErrorHeight * 2;
+    
+    
+  }
   
-  var cuntini = createImg('gifs/CUNTINI2.gif');
-  var cuntini2 = new imageCreate2(cuntini, windowWidth/2 - 260 , 100);
+  var chain = createImg('gifs/chain_up.gif');
+  var chain2 = new imageCreate2(chain, windowWidth/2, 0, chainWidth, chainHeight);
+  
+  var cuntini = createImg('gifs/CUNTINI3.gif');
+  var cuntini2 = new imageCreate2(cuntini, windowWidth/2 - 260 , 100, cuntiniWidth, cuntiniHeight);
   
   sound = loadSound('assets/sound.m4a');
   
   var djImg = createImg('gifs/Error1.png');
-  djInfo = new imageCreate2(djImg, -600, -600);
+  djInfo = new imageCreate2(djImg, -600, -600, djInfoWidth, djInfoHeight);
   
   //create list of Dj images
   for (var i=0; i<DjFile.length; i++){
@@ -49,7 +74,7 @@ function setup() {
   //create error list for end animation
    for (i=0; i<10; i++){
     var errorImg = createImg('gifs/Error2.png');
-    errorImg2 = new imageCreate2(errorImg, -600, -600);
+    errorImg2 = new imageCreate2(errorImg, -600, -600, secondErrorWidth, secondErrorHeight);
     errors.push(errorImg2);
     
   }
@@ -65,8 +90,11 @@ function imageCreate(element, x, y) {
    }
 }
 
-function imageCreate2(element, x, y) {
+function imageCreate2(element, x, y, inWidth, inHeight) {
   element.position(x,y);
+  var imgWidth = inWidth;
+  var imgHeight = inHeight;
+  element.size(imgWidth, imgHeight);
   this.changePos = function(newX, newY) {
   x = newX; //windowWidth * random(1);
   y = newY; //50;
@@ -76,7 +104,7 @@ function imageCreate2(element, x, y) {
 }
 
 
-function mouseReleased() {
+function mousePressed() {
   console.log('you clicked!');
   
   numOfClicks += 1;
@@ -92,6 +120,8 @@ function mouseReleased() {
 function draw() {
   imageMode(CENTER);
   background('black');
+  
+
 	
   if (numOfClicks == 1){
     djInfo.changePos(windowWidth/3, windowHeight/4);
@@ -142,7 +172,7 @@ function draw() {
   }
 }
 
-if (numOfClicks >= 27)
+if (numOfClicks >= 29)
  {
     var currentError = 0;
       var errorX = windowWidth/4;
