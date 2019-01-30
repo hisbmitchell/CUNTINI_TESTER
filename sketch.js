@@ -47,7 +47,7 @@ function preload(){
   	var chain2 = new imageCreate2(chain, windowWidth/2, 0, chainWidth, chainHeight);
   
   	var cuntini = createImg('gifs/CUNTINI7.gif');
-  	var cuntini2 = new imageCreate2(cuntini, windowWidth/2 - 260 , 100, cuntiniWidth, cuntiniHeight);
+  	var cuntini2 = new imageCreate2(cuntini, windowWidth/2 - cuntiniWidth/2 , windowHeight/2 - cuntiniHeight/2, cuntiniWidth, cuntiniHeight);
 	
 	var djImg = createImg('gifs/Error1.png');
   	djInfo = new imageCreate2(djImg, -700, -700, djInfoWidth, djInfoHeight);
