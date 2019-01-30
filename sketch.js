@@ -54,7 +54,7 @@ function preload(){
 	var chain = createImg('gifs/chain_up.gif');
   	var chain2 = new imageCreate2(chain, windowWidth/2, 0, chainWidth, chainHeight);
   
-  	var cuntini = createImg('gifs/CUNTINI7.gif');
+  	var cuntini = createImg('gifs/CUNTINI8.gif');
   	var cuntini2 = new imageCreate2(cuntini, windowWidth/2 - cuntiniWidth/2 , windowHeight/2 - cuntiniHeight/2, cuntiniWidth, cuntiniHeight);
 	
 	
