@@ -16,8 +16,8 @@ var soundPlaying = false;
 var timeTrue = true;
 var newTime;
 
-var chainWidth = windowWidth * 0.04051; 
-var chainHeight = windowWidth; 
+var chainWidth = 22; 
+var chainHeight = 543; 
 var cuntiniWidth = 520; 
 var cuntiniHeight = 469;
 var djInfoWidth = 266; 
@@ -32,7 +32,7 @@ function preload(){
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  
+ 
     if (windowWidth <1000){
     var cuntiniRatio = cuntiniHeight/cuntiniWidth;
     var chainRatio = chainWidth/chainHeight;
