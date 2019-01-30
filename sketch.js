@@ -36,7 +36,7 @@ function setup() {
     if (windowWidth <1000){
     var cuntiniRatio = cuntiniHeight/cuntiniWidth;
     var chainRatio = chainWidth/chainHeight;
-   	cuntiniWidth = windowWidth * 0.9;
+   	cuntiniWidth = windowWidth * 0.95;
    	cuntiniHeight = cuntiniWidth * cuntiniRatio;
    	chainHeight = windowHeight;
 	chainWidth = chainHeight * chainRatio; 
