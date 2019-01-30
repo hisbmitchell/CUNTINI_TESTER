@@ -35,7 +35,7 @@ function setup() {
   
     if (windowWidth <1000){
     var cuntiniRatio = cuntiniHeight/cuntiniWidth;
-    cuntiniWidth = windowWidth * 0.7;
+    cuntiniWidth = windowWidth * 0.9;
     cuntiniHeight = cuntiniWidth * cuntiniRatio;
     chainWidth = chainWidth * 2; 
     chainHeight = chainHeight * 2; 
@@ -57,7 +57,7 @@ function setup() {
   sound = loadSound('assets/sound.m4a');
   
   var djImg = createImg('gifs/Error1.png');
-  djInfo = new imageCreate2(djImg, -600, -600, djInfoWidth, djInfoHeight);
+  djInfo = new imageCreate2(djImg, -700, -700, djInfoWidth, djInfoHeight);
   
   //create list of Dj images
   for (var i=0; i<DjFile.length; i++){
