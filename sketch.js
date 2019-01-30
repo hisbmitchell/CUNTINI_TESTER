@@ -110,7 +110,7 @@ function imageCreate2(element, x, y, inWidth, inHeight) {
 function mousePressed() {
   console.log('you clicked!');
   
-  numOfClicks += clickRate;
+  numOfClicks += 1;
   randWidth = random(0, 0.7);
   randHeight = random(0, 0.7);
   currentImg +=1;
@@ -162,7 +162,7 @@ function draw() {
   // }
   }
     
-  else if (numOfClicks >= 2){
+  else if ((numOfClicks >= 2 && numOfClicks % 2 === 0)){
     //console.log('click = 1!');
     randX = windowWidth * randWidth;
     randY = windowHeight * randHeight;
