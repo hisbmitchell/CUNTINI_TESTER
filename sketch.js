@@ -55,12 +55,14 @@ function preload(){
   	var cuntini = createImg('gifs/CUNTINI7.gif');
   	var cuntini2 = new imageCreate2(cuntini, windowWidth/2 - cuntiniWidth/2 , windowHeight/2 - cuntiniHeight/2, cuntiniWidth, cuntiniHeight);
 	
-	var djImg = createImg('gifs/Error1.png');
-  	djInfo = new imageCreate2(djImg, -700, -700, djInfoWidth, djInfoHeight);
+	
   }
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
+	
+	var djImg = createImg('gifs/Error1.png');
+  	djInfo = new imageCreate2(djImg, -700, -700, djInfoWidth, djInfoHeight);
 
   sound = loadSound('assets/sound.m4a');
   
@@ -129,7 +131,7 @@ function draw() {
   
 
 	
-  if (numOfClicks == 1){
+  if (numOfClicks >= 1){
     djInfo.changePos(windowWidth/3, windowHeight/4);
     
   //   var currentError = 0;
