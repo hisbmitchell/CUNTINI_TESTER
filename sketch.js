@@ -25,6 +25,7 @@ var djInfoHeight = 406;
 var secondErrorWidth = 239; 
 var secondErrorHeight = 242;
 var multiplier = 1;
+var clickRate = 1;
 
 function preload(){
     //djPic1 = loadImage('dj_pics/djPic1.jpg');
@@ -45,6 +46,7 @@ function setup() {
    	secondErrorWidth = secondErrorWidth * 2.5; 
    	secondErrorHeight = secondErrorHeight * 2.5;
    	multiplier = 2;
+	clickRate = 0.5;
     
     
   }
@@ -108,7 +110,7 @@ function imageCreate2(element, x, y, inWidth, inHeight) {
 function mousePressed() {
   console.log('you clicked!');
   
-  numOfClicks += 1;
+  numOfClicks += clickRate;
   randWidth = random(0, 0.7);
   randHeight = random(0, 0.7);
   currentImg +=1;
