@@ -29,21 +29,7 @@ var clickRate = 1;
 
 function preload(){
     //djPic1 = loadImage('dj_pics/djPic1.jpg');	
-  }
-
-function setup() {
-  createCanvas(windowWidth, windowHeight);
-	
-	var chain = createImg('gifs/chain_up.gif');
-  	var chain2 = new imageCreate2(chain, windowWidth/2, 0, chainWidth, chainHeight);
-  
-  	var cuntini = createImg('gifs/CUNTINI7.gif');
-  	var cuntini2 = new imageCreate2(cuntini, windowWidth/2 - 260 , 100, cuntiniWidth, cuntiniHeight);
-	
-	var djImg = createImg('gifs/Error1.png');
-  	djInfo = new imageCreate2(djImg, -700, -700, djInfoWidth, djInfoHeight);
- 
-    if (windowWidth <1000){
+	  if (windowWidth <1000){
     var cuntiniRatio = cuntiniHeight/cuntiniWidth;
     var chainRatio = chainWidth/chainHeight;
    	cuntiniWidth = windowWidth;
@@ -55,13 +41,22 @@ function setup() {
    	secondErrorWidth = secondErrorWidth * 2.5; 
    	secondErrorHeight = secondErrorHeight * 2.5;
    	multiplier = 2;
-	clickRate = 0.5;
-    
-    
+	clickRate = 0.5;  
   }
+	var chain = createImg('gifs/chain_up.gif');
+  	var chain2 = new imageCreate2(chain, windowWidth/2, 0, chainWidth, chainHeight);
   
+  	var cuntini = createImg('gifs/CUNTINI7.gif');
+  	var cuntini2 = new imageCreate2(cuntini, windowWidth/2 - 260 , 100, cuntiniWidth, cuntiniHeight);
+	
+	var djImg = createImg('gifs/Error1.png');
+  	djInfo = new imageCreate2(djImg, -700, -700, djInfoWidth, djInfoHeight);
+  }
+
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+
   sound = loadSound('assets/sound.m4a');
-  
   
   //create list of Dj images
   for (var i=0; i<DjFile.length; i++){
