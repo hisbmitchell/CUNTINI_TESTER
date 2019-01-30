@@ -36,7 +36,7 @@ function setup() {
     if (windowWidth <1000){
     var cuntiniRatio = cuntiniHeight/cuntiniWidth;
     var chainRatio = chainWidth/chainHeight;
-   	cuntiniWidth = windowWidth * 0.95;
+   	cuntiniWidth = windowWidth;
    	cuntiniHeight = cuntiniWidth * cuntiniRatio;
    	chainHeight = windowHeight;
 	chainWidth = chainHeight * chainRatio; 
@@ -52,7 +52,7 @@ function setup() {
   var chain = createImg('gifs/chain_up.gif');
   var chain2 = new imageCreate2(chain, windowWidth/2, 0, chainWidth, chainHeight);
   
-  var cuntini = createImg('gifs/CUNTINI2.gif');
+  var cuntini = createImg('gifs/CUNTINI4.gif');
   var cuntini2 = new imageCreate2(cuntini, windowWidth/2 - cuntiniWidth/2 , windowHeight/2 - cuntiniHeight/2, cuntiniWidth, cuntiniHeight);
   
   sound = loadSound('assets/sound.m4a');
