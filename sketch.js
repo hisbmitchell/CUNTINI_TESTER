@@ -163,7 +163,7 @@ function draw() {
   // }
   }
     
-  else if ((numOfClicks >= 2 && numOfClicks % 2 === 0)){
+  else if ((numOfClicks >= 4 && numOfClicks % 2 === 0)){
     //console.log('click = 1!');
     randX = windowWidth * randWidth;
     randY = windowHeight * randHeight;
@@ -176,7 +176,7 @@ function draw() {
   }
 }
 
-if (numOfClicks >= 29)
+if (numOfClicks >= images.length * 2)
  {
     var currentError = 0;
       var errorX = windowWidth/4;
