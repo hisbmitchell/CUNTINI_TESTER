@@ -174,7 +174,7 @@ function draw() {
   }
 }
 
-if (numOfClicks >= images.length * 2)
+if (numOfClicks >= images.length )
  {
     var currentError = 0;
       var errorX = windowWidth/4;
