@@ -27,6 +27,8 @@ var secondErrorHeight = 242;
 var multiplier = 1;
 var clickRate = 1;
 
+var preDone;
+
 function preload(){
     //djPic1 = loadImage('dj_pics/djPic1.jpg');	
 	
@@ -63,6 +65,7 @@ function setup() {
 	
 	var djImg = createImg('gifs/Error1.png');
   	djInfo = new imageCreate2(djImg, -700, -700, djInfoWidth, djInfoHeight);
+	preDone = true;
 
   sound = loadSound('assets/sound.m4a');
   
@@ -114,6 +117,7 @@ function imageCreate2(element, x, y, inWidth, inHeight) {
 function mousePressed() {
   console.log('you clicked!');
   
+if (preDone === true){
   numOfClicks += 1;
   randWidth = random(0, 0.7);
   randHeight = random(0, 0.7);
@@ -123,6 +127,8 @@ function mousePressed() {
   if (currentImg== images.length){
     currentImg = 0;
   }
+	
+}
  }
 
 function draw() {
